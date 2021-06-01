@@ -4,72 +4,102 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Web Visualization Dashboard (Latitude)</title>
+
+	<!-- BootStrap Link-->
+
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
+	<!-- CSS Link-->
+
 	<link rel="stylesheet" href="style.css">
-	<style>
-		body {background-color: rgb(226,225,225)}
-		
-	</style>
 </head>
 
 <body>
-	<nav class="navbar navbar-expand-lg">
-		<div class="container-fluid">
-			<div class="navbar-header">
-				<a class="navbar-brand" href="index.html">Latitude</a>
-				</div>
-				<ul class="nav navbar-nav navbar-right">
-					<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Plots <span class="caret"></span></a>
-						<ul class="dropdown-menu">
-							<li><a href="maxtemp.html">Max Temprature</a></li>
-							<li><a href="humidity.html">Humidity</a></li>
-							<li><a href="cloudiness.html">Cloudiness</a></li>
-							<li><a href="windspeed.html">Wind Speed</a></li>
 
-						</ul>
+	<!-- Navigation -->
+	<div class="navigation">
+	<nav class="navbar navbar-expand-lg navbar-light">
+		<a class="navbar-brand" style="background-color: #0BADA6" href="">Latitude</a>
+		<button class="navbar-toggler border border-white" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+		aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNavDropdown">
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item dropdown">
+			<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				Plots
+			</a>
+				
+						<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+							<a class="dropdown-item" href="maxtemp.html">Max Temperature</a>
+							<a class="dropdown-item" href="humidity.html">Humidity</a>
+							<a class="dropdown-item" href="cloudiness.html">Cloudiness</a>
+							<a class="dropdown-item" href="windspeed.html">Wind Speed</a>
+						</div>
 					</li>
-					<li><a href="comparison.html">Comparison</a></li>
-					<li><a href="data.html">Data</a></li>
+
+					</li>
+					<li class="nav-item">
+					<a href="comparison.html">Comparison</a>
+				</li>
+
+					<li class="nav-item"> 
+						<a href="data.html">Data</a>
+					</li>
 				</ul>
 			</div>
 		</nav>
-		<br>
-		<br>
-		<br>
+	</div>
+				
 
-		<!-- Container 1 -->
+		<!-- Content -->
 		<div class="container">
 			<div class="row">
-				<div class="col-lg col-sm-12">
-					<h1>Summary: Latitude vs. X</h1>
+				<div class="col-lg col-md-12">
+					<!-- Left Box -->
+					<div class="box">
+					<h3>Summary: Latitude vs. X</h3>
 					<hr>
-					<br>
-					<img src="lat_vs_maxtemp.png" alt="maxtemp" height="200" width="200" align = "left">
+					
+					<img src="Resources/assets/images/Fig1.png" class="visualization rounded float-left" alt="Max Temperature Graph">
 					<p> The purpose of this project was to analyze how weather changes as you get closer to the equator. To accomplish this analysis, we first pulled data from the OpenWeather API to assemble a dataset of over 500 cities.
 					</p>
 					<p> After assembling the data set, we used Matplotlib to plot various aspects of the weather vs latitude. factors we looked at included: temprature, cloufiness, humidity and wind speed. this site provides the source data and visualization created as part of the analysis as well as explanations and descriptipons of any trends and correlations witnessed.
 					</p>
 				</div>
-				<div class="col-md-4 col-sm-12">
-					<h2> Visualizations</h2>
+			</div>
+				<div class="col-lg-5 col-md-12">
+
+					<!-- Right Box -->
+					<div class="box">
+					<h5 class="title"> Visualizations</h5>
 					<hr>
-						<div class="col-md-6 col-sm-3">
-							<img id="pic1" src="lat_vs_maxtemp.png" alt="maxtemp" height="150" width="150">
+					<div class="container">
+						<div class="row" style="padding-bottom: 30px;">
+						<div class="col-6">
+							<a href="max_temperature.html">
+							<img class="panel" src="Resources/assets/images/Fig1.png" alt="Max Temperature Graph" height="150" width="150">
+							</a>
 						</div>
 						<div class="col-md-6 col-sm-3">
-							<img id = "pic2" src="lat_vs_humidity.png" alt="humidity" height="150" width="150">
+							<img class="panel" src="Resources/assets/images/Fig2.png" alt="Humidity" height="150" width="150">
 						</div>
 						<div class= "col-md-6 col-sm-3">
-							<img id="pic3" src="lat_vs_cloudiness.png"  alt="cloudiness" height="150" width="150">
+							<img class="panel" src="Resources/assets/images/Fig3.png"  alt="Cloudiness" height="150" width="150">
 						</div>
 						<div class="col-md-6 col-sm-3">
-							<img id="pic4" src="lat_vs_windspeed.png" alt="windspeed" height="150" width="150">
+							<img class="panel" src="Resources/assets/images/Fig4.png" alt="Wind Speed" height="150" width="150">
+							</div>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 			
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</script>
 </body>
-<script src="">
+</html>
+
