@@ -1,4 +1,2 @@
 
-
-# Web-Design-Challenge.github.io
-Web Design Assignment.
+## Web Visualization Dashboard (Latitude)
